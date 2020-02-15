@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="eng" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>OLA Rides Prediction Model</title>
+  <link rel="stylesheet" type="text/css" href="static/css/master.css">
+</head>
+<body>
+    <h1>OLA Weekly Rides Analysis</h1>
+    <form action="{{url_for('predict2')}}" methods ="post">
+        <input type="text" name="Priceperweek" placeholder="Priceperweek" required="required">
+        <input type="text" name="Population" placeholder="Population" required="required">
+        <input type="text" name="Monthlyincome" placeholder="Monthlyincome" reqiuired="required">
+        <input type="text" name="Averageparkingpermonth" placeholder="Averageparkingpermonth" required="required">
+        <button type="submit" class="btn btn-primary btn-block btn-large"   onclick="alert('You pressed the button!')">Predict!</button>
+
+    </form>
+     <br>
+     <br>
+     {{ prediction_text }}
+ </body>
+</html> 
